@@ -1,69 +1,49 @@
-# React + TypeScript + Vite
+# 🎓 Azure Static Web Apps - Projet de Formation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Contexte
 
-Currently, two official plugins are available:
+Ce repository est un **projet de formation personnel** créé dans le cadre de ma montée en compétences sur **Azure** et ses services cloud.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> **Note :** Ce projet est en cours de développement et sert uniquement à des fins d'apprentissage et d'expérimentation avec les technologies Azure.
 
-## Expanding the ESLint configuration
+## 🎯 Objectifs d'Apprentissage
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- ✅ Déploiement d'applications React sur **Azure Static Web Apps**
+- ✅ Configuration du déploiement automatique avec GitHub Actions
+- 🔄 Mise en place d'une pipeline CI/CD complète (en cours)
+- 🔄 Intégration avec les services **Azure Cognitive Services** (planifié)
+- 📚 Familiarisation avec l'écosystème Azure
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Technologies Utilisées
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **Frontend :** React 18 + TypeScript + Vite
+- **Cloud Provider :** Microsoft Azure
+- **Déploiement :** GitHub Actions → Azure Static Web Apps
+- **Services Azure (à venir) :**
+  - Azure OpenAI Service
+  - Azure Form Recognizer
+  - Azure Application Insights
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📊 Statut du Projet
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+🚧 **WORK IN PROGRESS** 🚧
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### ✅ Réalisé
+- Setup initial du projet React avec TypeScript
+- Configuration Azure Static Web Apps
+- Déploiement automatique fonctionnel (push → build → deploy)
+- Hosting HTTPS avec certificat SSL automatique
+- Résolution des problèmes de compatibilité Node/Vite
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 🔄 En cours
+- Ajout de tests unitaires (Vitest)
+- Configuration ESLint et Prettier
+- Mise en place du quality gate dans la pipeline
+
+### 📝 Prochaines étapes
+- [ ] Intégration des tests dans la pipeline CI
+- [ ] Configuration du linting automatique
+- [ ] Ajout de branch protection rules
+- [ ] Connexion aux services Azure IA
+- [ ] Monitoring avec Application Insights
+- [ ] Environnements multiples (dev/staging/prod)
